@@ -1,0 +1,149 @@
+/* Global Styles */
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #111;
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+}
+/* Glowing Header Text Animation */
+@keyframes glowingText {
+    0% { text-shadow: 0 0 10px #ff0099, 0 0 20px #ff0099; }
+    50% { text-shadow: 0 0 20px #ff0099, 0 0 40px #ff0099; }
+    100% { text-shadow: 0 0 10px #ff0099, 0 0 20px #ff0099; }
+}
+
+.title {
+    animation: glowingText 1.5s infinite alternate ease-in-out;
+}
+
+/* Scroll-triggered image animation */
+.image-pair {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    background: linear-gradient(135deg, #ff0099, #493240);
+    box-shadow: 0 4px 10px rgba(255, 0, 150, 0.4);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Celebration Button */
+.glow-button {
+    background: #ff0099;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(255, 0, 150, 0.7);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.glow-button:hover {
+    box-shadow: 0 0 20px rgba(255, 0, 150, 1);
+    transform: scale(1.1);
+}
+
+/* Image Gallery */
+.images-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-pair {
+    position: relative;
+    width: 90%;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-pair img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 0, 150, 0.5);
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+/* Scroll Section */
+.scroll-section {
+    padding: 40px;
+    background: #222;
+    border-top: 2px solid #ff0099;
+}
+
+.scroll-section p {
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Cake Surprise */
+#cake-container {
+    display: none;
+    margin-top: 20px;
+}
+
+#cake-container img {
+    width: 150px;
+    animation: float 2s infinite ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: linear-gradient(135deg, #493240, #ff0099);
+    box-shadow: 0 -4px 10px rgba(255, 0, 150, 0.4);
+    font-size: 1rem;
+}
