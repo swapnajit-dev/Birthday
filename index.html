@@ -1,68 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Sagar Bro 🎈!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Malaya 🎈!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #1e1e2f, #2b2b3c);
+      color: #fff;
+      text-align: center;
+    }
 
-    <!-- Confetti Library -->
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    header {
+      padding: 2rem 1rem;
+      background-color: #292942;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .title {
+      font-size: 2.5rem;
+      color: #f8c291;
+      text-shadow: 0 0 10px #f8c291;
+      margin-bottom: 1rem;
+    }
+
+    .glow-button {
+      background-color: #ff7675;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #ff7675;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .glow-button:hover {
+      transform: scale(1.05);
+    }
+
+    .images-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .image-pair {
+      background-color: #33334d;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      max-width: 280px;
+      transition: transform 0.3s ease;
+      display: none; /* hidden initially */
+    }
+
+    .image-pair:hover {
+      transform: translateY(-5px);
+    }
+
+    .image-pair img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .caption {
+      padding: 1rem;
+      font-size: 0.95rem;
+      color: #f1c40f;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .scroll-section {
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: #2f2f45;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .cake {
+      margin-top: 1rem;
+      display: none;
+      opacity: 0;
+      transform: scale(0.9);
+    }
+
+    .cake img {
+      width: 150px;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      padding: 2rem 1rem;
+      background-color: #1e1e2f;
+      font-size: 1rem;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1 class="title">🎉 Happy Birthday Sagar Bro 🥳! 🎂</h1>
-        <button id="birthday-btn" class="glow-button">Celebrate!</button>
-    </header>
+  <header>
+    <h1 class="title">🎉 Happy Birthday Malaya 🎂!</h1>
+    <button id="birthday-btn" class="glow-button">Celebrate!</button>
+  </header>
 
-    <div class="images-container">
-        <div class="image-pair">
-            <img src="a.jpg" alt="Image 1">
-            <div class="caption">
-                "Smiling through life’s best moments!"
-            </div>
-        </div>
-        <div class="image-pair">
-            <img src="b.jpg" alt="Image 2">
-            <div class="caption">
-                "Wishing you endless joy and success!"
-            </div>
-        </div>
-        <div class="image-pair">
-            <img src="c.jpg"" alt="Image 3">
-            <div class="caption">
-                "Sailing towards another year!"
-            </div>
-        </div>
-        <div class="image-pair">
-            <img src="d.jpg"" alt="Image 4">
-            <div class="caption">
-                "Riding towards another amazing year!"
-            </div>
-        </div>
+ <div class="images-container">
+  <div class="image-pair">
+    <img src="a.jpg" alt="Birthday Celebration" />
+    <div class="caption">The party begins! Malaya's smile lights up the room. ✨🎉</div>
+  </div>
+  <div class="image-pair">
+    <img src="b.jpg" alt="Birthday Celebration" />
+    <div class="caption">Surrounded by friends and laughter — a moment to remember. 🥳💖</div>
+  </div>
+  <div class="image-pair">
+    <img src="c.jpg" alt="Birthday Celebration" />
+    <div class="caption">That first bite of cake hits differently on your special day! 🎂😋</div>
+  </div>
+  <div class="image-pair">
+    <img src="d.jpg" alt="Birthday Celebration" />
+    <div class="caption">Caught mid-laugh — pure joy is the best filter! 😄📸</div>
+  </div>
+  <div class="image-pair">
+    <img src="e.jpg" alt="Birthday Celebration" />
+    <div class="caption">Decor dreams: every balloon tells a story! 🎈💫</div>
+  </div>
+  <div class="image-pair">
+    <img src="f.jpg" alt="Birthday Celebration" />
+    <div class="caption">Group hugs and goofy poses — friendship goals unlocked! 🫂😂</div>
+  </div>
+  <div class="image-pair">
+    <img src="g.jpg" alt="Birthday Celebration" />
+    <div class="caption">Malaya’s magical moment under the party lights. 🌟🎊</div>
+  </div>
+  <div class="image-pair">
+    <img src="h.jpg" alt="Birthday Celebration" />
+    <div class="caption">From candles to wishes — every spark counts. 🕯️💭</div>
+  </div>
+  <div class="image-pair">
+    <img src="i.jpg" alt="Birthday Celebration" />
+    <div class="caption">Dancing through the memories — let's groove tonight! 💃🕺</div>
+  </div>
+  <div class="image-pair">
+    <img src="j.jpg" alt="Birthday Celebration" />
+    <div class="caption">Ending the day with full hearts and sweet treats. ❤️🍰</div>
+  </div>
+</div>
+
+
+  <section class="scroll-section">
+    <p>Here's a special surprise for you! 🎁</p>
+    <button id="cake-btn" class="glow-button">🎂 Surprise Cake</button>
+    <div id="cake-container" class="cake">
+      <img src="vecteezy_birthday-cake-cutout_23522878.png" alt="Cake" />
+      <p>Enjoy your delicious cake! 🎉</p>
     </div>
+  </section>
 
-    <section class="scroll-section">
-        <p>Here's a special surprise for you, Sagar! 🎁</p>
-        <button id="cake-btn" class="glow-button">🎂 Surprise Cake</button>
-        <div id="cake-container" class="cake">
-            <img src=" vecteezy_birthday-cake-cutout_23522878.png" alt="Cake">
-            <p>Enjoy your delicious cake! 🎉</p>
-        </div>
-    </section>
-<p>
-   May this year be filled with joy, happiness, and success. May all your dreams and wishes come true.
-</p>
+  <p style="padding: 1rem; font-size: 1.1rem;">
+    May this year be filled with joy, happiness, and success. May all your dreams and wishes come true.
+  </p>
 
-    <footer>
-        <p>✨ Have a magical day! ✨</p>
-    </footer>
+  <footer>
+    ✨ Have a magical day! ✨
+  </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const birthdayBtn = document.getElementById("birthday-btn");
+      const sagarImages = document.querySelectorAll(".image-pair");
+      const cakeBtn = document.getElementById("cake-btn");
+      const cakeContainer = document.getElementById("cake-container");
+
+      // Initially hide images (already done in CSS)
+      sagarImages.forEach(image => {
+        image.style.display = "none";
+      });
+
+      const birthdaySound = new Audio("birthday.mp3");
+      const cakeSound = new Audio("pop.mp3");
+
+      birthdayBtn.addEventListener("click", () => {
+        birthdaySound.play();
+
+        let confettiInterval = setInterval(() => {
+          confetti({
+            particleCount: 100,
+            spread: 160,
+            origin: { y: 0.6 }
+          });
+        }, 300);
+
+        setTimeout(() => clearInterval(confettiInterval), 3000);
+
+        sagarImages.forEach((image, index) => {
+          image.style.display = "block";
+          gsap.fromTo(image,
+            { opacity: 0, scale: 0.8, y: 50 },
+            {
+              opacity: 1,
+              scale: 1,
+              y: 0,
+              duration: 1,
+              delay: index * 0.3,
+              ease: "power2.out"
+            }
+          );
+        });
+      });
+
+      cakeBtn.addEventListener("click", () => {
+        cakeSound.play();
+        cakeContainer.style.display = "block";
+        gsap.to(cakeContainer, {
+          opacity: 1,
+          scale: 1,
+          duration: 1,
+          ease: "power2.out"
+        });
+
+        gsap.to(cakeContainer, {
+          x: 5,
+          repeat: -1,
+          yoyo: true,
+          duration: 0.2
+        });
+      });
+
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.utils.toArray(".image-pair").forEach((image) => {
+        gsap.fromTo(image,
+          { opacity: 0, scale: 0.8, y: 50 },
+          {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: image,
+              start: "top 90%",
+              toggleActions: "play none none none"
+            }
+          }
+        );
+      });
+    });
+  </script>
 
 </body>
 </html>
